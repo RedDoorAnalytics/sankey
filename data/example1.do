@@ -1,6 +1,6 @@
+local drive /Users/Michael/Documents/reddooranalytics/products/sankey
 
-
-adopath ++ "/Users/Michael/Documents/sankey"
+adopath ++ "`drive'"
 clear all
 set seed 986786
 set obs 10
@@ -16,4 +16,4 @@ label define statelabs `labs'
 label values start statelabs
 label values stop statelabs
 
-save /Users/Michael/Documents/website/static/data/sankey_eg1.dta,replace
+// save /Users/Michael/Documents/website/static/data/sankey_eg1.dta,replace

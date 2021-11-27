@@ -20,7 +20,7 @@ label values stop statelabs
 gen xc = start/10
 gen yc = runiform()
 
-sankey start stop freq , 	colors(1 "blue" 2 "green" 3 "blue") 	///
-							title("Example Sankey plot") 		///
-							arrange(freeform)					
+sankey start stop freq , colors(1 "blue" 2 "green" 3 "blue") 	///
+                        title("Example Sankey plot") 		///
+                        arrange(freeform)					
 							
