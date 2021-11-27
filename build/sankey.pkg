@@ -1,7 +1,0 @@
-v 3
-d sankey: create Sankey plots
-d Author: Michael J. Crowther
-d Distribution-Date: 20200623
-f sankey.ado
-f sankey.sthlp
-e

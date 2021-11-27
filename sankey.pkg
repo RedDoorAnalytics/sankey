@@ -1,0 +1,7 @@
+v 3
+d sankey: create Sankey plots using the plotly Python library
+d Author: Michael J. Crowther
+d Distribution-Date: 20200623
+f sankey/sankey.ado
+f sankey/sankey.sthlp
+e
