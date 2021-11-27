@@ -1,0 +1,3 @@
+v 3
+d Stata package to create Sankey graphs using the plotly Python library
+p sankey
