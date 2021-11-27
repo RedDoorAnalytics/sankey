@@ -6,25 +6,25 @@ History
 
 23jun2020: version 1.3.0 - x() and y() added to allow specification of coordinates for node placement
 22jun2020: version 1.2.0 - if/in added
-						 - bug fix; when the same label was applied to multiple different states, it only labelled one of them -> now fixed
+			 - bug fix; when the same label was applied to multiple different states, it only labelled one of them -> now fixed
 22jun2020: version 1.1.0 - added bgcolor() to change background color
-						 - added arrange() to change node arrangements
+			 - added arrange() to change node arrangements
 21jun2020: version 1.0.0 - initial release
 */
 
 program sankey
 	version 16
-	syntax [varlist(min=3)] [if] [in]	,									///
-											[								///
-												TITLE(string)				///
-												COLORS(string)				///
-												LINKColor(string)			///
-												BGCOLOR(string)				///
-												NOLABELS					///
-																			///
-												ARRANGE(string)				///
-												*							/// 
-											]
+	syntax [varlist(min=3)] [if] [in]	,		///
+                [						///
+                        TITLE(string)				///
+                        COLORS(string)				///
+                        LINKColor(string)			///
+                        BGCOLOR(string)				///
+                        NOLABELS				///
+                                                                ///
+                        ARRANGE(string)				///
+                        *					/// 
+                ]
 	
 
 	capture python which plotly
@@ -65,7 +65,7 @@ program sankey
 	}
 	local Nxpos = `ind' - 1
 	
-	//=================================================================================================//
+	//===================================================================//
 	
 	marksample touse
 	markout `touse' `varlist'
@@ -114,7 +114,7 @@ program sankey
 	python: stop 	= np.asarray(Data.get("`s1'",None,"`touse'"))
 	python: freq 	= np.asarray(Data.get("`freq'",None,"`touse'"))
 	
-	//=================================================================================================//
+	//===================================================================//
 	// plot appearance
 	
 	// title
@@ -165,7 +165,7 @@ program sankey
 		python: linkcolor = "`linkcolor'"
 	}
 
-	//=================================================================================================//
+	//===================================================================//
 	python: sankey()
 	
 	//tidy up
@@ -233,7 +233,7 @@ void getnewstates()
 	}
 	
 	
-	//=================================================================================================//
+	//===================================================================//
 	
 	//find unique states (and labels)
 	for (i=1;i<=Nstates;i++) {
